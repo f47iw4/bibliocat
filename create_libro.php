@@ -30,7 +30,11 @@ $autores = $conn->query($sql);
     <select name="autor_id">
         <?php while($row = $autores->fetch_assoc()) { ?>
             <option value ="<?php echo $row['autor_id']; ?>"><?php echo $row['nombre_autor']; ?></option>
-        }
-    </select>
+        <?php } ?>
+    </select><br>
+
+    <label> Año de publicación : </label><br>
+    <input type="number" name="anio_publicacion"><br>
+    <input type="submit" name="submit" value="Crear Libro">
 
 </form>
